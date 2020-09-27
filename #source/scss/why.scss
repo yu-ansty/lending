@@ -1,21 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .why {
-    width: 100%;
-    background: rgb(98, 209, 223);
     &__column {
-        display: flex;
-        justify-content: space-between;
-        @media (max-width:990px) {
-            flex-direction: column;
-        }
+        background: rgb(98, 209, 223);
     }
     &__body {
-        align-items: center;
-        position: relative;
         margin: 0 auto;
-        flex: 1 1 auto;
         max-width: 700px;
         padding: 7% 30px 20px;
         color: #fff;
+        @media (max-width:1100px) {
+            flex-direction: column;
+        }
     }
     &__title {
         font-size: 36px;
@@ -23,7 +22,7 @@
         line-height: 27px;
         margin: 0px 0px 60px;
         letter-spacing: -0.006em;
-        @media (max-width:990px) {
+        @media (max-width:1100px) {
             text-align: center;
             margin: 10px 0px 30px;
         }
@@ -34,7 +33,7 @@
     }
     &__img {
         flex: 0 0 525px;
-        @media (max-width:990px) {
+        @media (max-width:1100px) {
             text-align: center;
             margin: 10px;
         }

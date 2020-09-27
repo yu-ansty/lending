@@ -206,11 +206,19 @@ body.lock {
   padding: 19px;
 }
 
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 100%;
+}
+
 .main__start-screen {
-  position: relative;
-  width: 600px;
-  height: 800px;
-  max-height: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -227,19 +235,11 @@ body.lock {
 }
 
 .main__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 0;
-  height: 100%;
   background-color: #F4F9E2;
 }
 
 .main__body {
-  position: absolute;
-  top: 50%;
-  height: 400px;
-  margin: -150px 30px 0px;
+  padding: 40% 30px 30px;
   font-weight: 600;
 }
 
@@ -265,9 +265,10 @@ body.lock {
 }
 
 .main__image img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  max-width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 600px;
+  flex: 0 0 600px;
+  width: 100%;
   -webkit-box-shadow: 0px 1px 3px #FAB63E;
   box-shadow: 0px 1px 3px #FAB63E;
   padding: 10px;
@@ -291,7 +292,7 @@ body.lock {
 
 .main__btn a {
   color: #FAB63E;
-  margin: 0px 30px 0px 0px;
+  margin: 0px 30px 40px 0px;
   padding: 10px 30px;
 }
 
@@ -300,12 +301,7 @@ body.lock {
   color: #fff;
 }
 
-.why {
-  width: 100%;
-  background: #62d1df;
-}
-
-.why__column {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -314,15 +310,12 @@ body.lock {
   justify-content: space-between;
 }
 
+.why__column {
+  background: #62d1df;
+}
+
 .why__body {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
   margin: 0 auto;
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
   max-width: 700px;
   padding: 7% 30px 20px;
   color: #fff;
@@ -477,27 +470,36 @@ body.lock {
   background-size: cover;
 }
 
-@media (max-width: 1300px) {
-  .main__body {
-    top: 40%;
-  }
-}
-
 @media (max-width: 1100px) {
   .main__body {
-    margin: -170px 20px 0px;
-  }
-
-  .main__title {
-    margin: 20px 0px 0px;
+    padding: 30% 20px 0px;
   }
 
   .main__text {
     margin: 20px 0px;
   }
 
-  .main__btn a {
-    margin: 0px 20px 0px 0px;
+  .main__image {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 500px;
+    flex: 0 1 500px;
+  }
+
+  .why__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .why__title {
+    text-align: center;
+    margin: 10px 0px 30px;
+  }
+
+  .why__img {
+    text-align: center;
+    margin: 10px;
   }
 
   .about__body {
@@ -520,40 +522,26 @@ body.lock {
   }
 
   .main__body {
-    margin: -250px 20px 0px;
+    padding: 20% 20px 0px;
   }
 
-  .main__image {
-    width: 500px;
+  .main__title {
+    margin: 20px 0px 0px;
   }
 
-  .why__column {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+  .main__btn a {
+    margin: 0px 10px 40px 0px;
+    padding: 10px 20px;
   }
+}
 
-  .why__title {
-    text-align: center;
-    margin: 10px 0px 30px;
-  }
-
-  .why__img {
-    text-align: center;
-    margin: 10px;
+@media (max-width: 910px) {
+  .main__text {
+    line-height: 36px;
   }
 }
 
 @media (max-width: 800px) {
-  .main__text {
-    line-height: 36px;
-  }
-
-  .main__btn a {
-    padding: 10px 20px;
-  }
-
   .one {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -716,26 +704,8 @@ body.lock {
     justify-content: flex-end;
   }
 }
-
-@media (max-width: 365px) {
-  .main__start-screen {
-    height: 900px;
-  }
-
-  .main__body {
-    margin: -300px 20px 0px;
-  }
-}
 @supports (-webkit-appearance:none){
 .picture{background:url(../img/003.jpg) no-repeat}
-}
-
- @media (max-width: 1300px){
-
-@supports (-webkit-appearance:none){
-
-}
-
 }
 
  @media (max-width: 1100px){
@@ -747,6 +717,14 @@ body.lock {
 }
 
  @media (max-width: 990px){
+
+@supports (-webkit-appearance:none){
+
+}
+
+}
+
+ @media (max-width: 910px){
 
 @supports (-webkit-appearance:none){
 
@@ -787,14 +765,6 @@ body.lock {
 }
 
  @media (max-width: 370px){
-
-@supports (-webkit-appearance:none){
-
-}
-
-}
-
- @media (max-width: 365px){
 
 @supports (-webkit-appearance:none){
 
