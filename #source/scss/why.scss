@@ -1,6 +1,10 @@
-.container {
+.container-why {
     display: flex;
     justify-content: space-between;
+    @media (max-width:1100px) {
+        flex-direction: column;
+    }
+
 }
 
 .why {
@@ -12,9 +16,6 @@
         max-width: 700px;
         padding: 7% 30px 20px;
         color: #fff;
-        @media (max-width:1100px) {
-            flex-direction: column;
-        }
     }
     &__title {
         font-size: 36px;
@@ -35,7 +36,7 @@
         flex: 0 0 525px;
         @media (max-width:1100px) {
             text-align: center;
-            margin: 10px;
+            margin: 10px 0px 30px;
         }
         @media (max-width:440px) {
             display: none;
