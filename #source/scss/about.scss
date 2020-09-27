@@ -1,16 +1,19 @@
+.container-about {
+    display: flex;
+    padding: 150px 100px 100px;
+    @media (max-width:1100px) {
+        flex-direction: column;
+        padding: 90px 50px 70px;
+    }
+    @media (max-width:440px) {
+        padding: 50px 30px 40px;
+    }
+}
+
 .about{
     background: #E5E5E5;
     &__body {
         color: #22356F;
-        display: flex;
-        padding: 150px 100px 70px;
-        @media (max-width:1100px) {
-            flex-direction: column;
-            padding: 100px 50px 40px;
-        }
-        @media (max-width:440px) {
-            padding: 70px 30px 30px;
-        }
     }
     &__title {
         font-size: 16px;
