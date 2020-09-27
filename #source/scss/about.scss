@@ -1,0 +1,123 @@
+.about{
+    background: #E5E5E5;
+    &__body {
+        color: #22356F;
+        display: flex;
+        padding: 150px 100px 70px;
+        @media (max-width:1100px) {
+            flex-direction: column;
+            padding: 100px 50px 40px;
+        }
+        @media (max-width:440px) {
+            padding: 70px 30px 30px;
+        }
+    }
+    &__title {
+        font-size: 16px;
+        line-height: 23px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        @media (max-width:1100px) {
+            text-align: center;
+            margin: 0px 0px 20px;
+        }
+    }
+    &__text {
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: 600;
+        letter-spacing: 0.005em;
+        max-width: 700px;
+        justify-content: center;
+        position: relative;
+        margin: auto;
+    }
+}
+.main__subtitle {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: rgba(34, 53, 111, 0.5);
+    margin: 0px 0px 20px;
+}
+
+.main__rows {
+    display: flex;
+    margin: 0 0 80px;
+}
+
+.one {
+    @media (max-width:800px) {
+        flex-wrap: wrap;
+    }
+}
+.two {
+    flex-wrap: wrap;
+}
+
+.rows {
+    &__columns {
+        flex: 0 0 25%;
+        padding: 0px 0px 13% 0px;
+        &:hover {
+            transform: rotateY(180deg);
+            background-color: #9d9e70;
+        }
+        @media (max-width:800px) {
+            flex: 0 0 50%;
+            padding: 0px 0px 20% 0px;
+        }
+        @media (max-width:440px) {
+            flex: 0 0 100%;
+        }
+    }
+    &__heading {
+        font-size: 32px;
+        line-height: 34px;
+        letter-spacing: -0.006em;
+        color: #ffffff;
+        text-align: center;
+        margin: 60px 10px 0px;
+        font-weight: 600;
+        span {
+            display: inline-block;
+            width: 70%;
+            border-top: 2px solid #ffffff;
+            margin: 20px 40px;
+        }
+    }
+}
+
+.rows__line {
+    flex: 0 0 33.333%;
+    padding: 0px 0px 13% 0px;
+}
+
+/* *Цвета для колонок */
+.pink {
+    background: #FFE2DE;
+}
+.green {
+    background: #C4E769;
+}
+.blue {
+    background: #62D0DF;
+}
+.dark-blue {
+    background: #0052C1;
+}
+.dark {
+    background: #22356F;
+}
+.lilac {
+    background: #DEE1FF;
+}
+.violet {
+    background: #8F00FF;
+}
+.picture {
+    background: url(../img/003.jpg) no-repeat;
+    background-size: cover;
+}
