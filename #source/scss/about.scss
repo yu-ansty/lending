@@ -1,3 +1,4 @@
+
 .container-about {
     display: flex;
     padding: 150px 100px 100px;
@@ -31,11 +32,10 @@
         font-weight: 600;
         letter-spacing: 0.005em;
         max-width: 700px;
-        justify-content: center;
-        position: relative;
         margin: auto;
     }
 }
+
 .main__subtitle {
     text-transform: uppercase;
     font-size: 16px;
@@ -46,18 +46,17 @@
     margin: 0px 0px 20px;
 }
 
+//-------------------------
+
 .main__rows {
     display: flex;
     margin: 0 0 80px;
 }
 
-.one {
+.container-one {
     @media (max-width:800px) {
         flex-wrap: wrap;
     }
-}
-.two {
-    flex-wrap: wrap;
 }
 
 .rows {
@@ -93,9 +92,23 @@
     }
 }
 
+//-----------------------------
+
+.container-two {
+    flex-wrap: wrap;
+}
+
 .rows__line {
     flex: 0 0 33.333%;
     padding: 0px 0px 13% 0px;
+    @media (max-width:767px) {
+        flex: 0 0 50%;
+        padding: 0px 0px 18% 0px;
+    }
+    @media (max-width:490px) {
+        flex: 0 0 100%;
+        padding: 0px 0px 24% 0px;
+    }
 }
 
 /* *Цвета для колонок */

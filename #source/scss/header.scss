@@ -1,10 +1,5 @@
 @import 'mixin';
 
-.wrapper {
-    min-height: 100%;
-    overflow: hidden;
-}
-
 body {
     &.lock {
             overflow: hidden;
@@ -128,6 +123,9 @@ body {
                 text-align: center;
                 font-size: 30px;
                 margin: 0px 0px 20px;
+            }
+            &:visited {
+                font-weight: 600;
             }
             &:hover{
                 font-weight: 600;
