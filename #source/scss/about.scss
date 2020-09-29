@@ -101,6 +101,14 @@
     }
 }
 
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    @include flexbox();
+}
+
 //-----------------------------
 
 .container-wrap {
@@ -166,10 +174,3 @@
 }
 /* *-------------------------------------*/
 
-.slick-list {
-    overflow: hidden;
-}
-
-.slick-track {
-    @include flexbox();
-}
