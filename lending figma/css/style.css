@@ -390,7 +390,7 @@ body.lock {
 }
 
 .rows__columns {
-  padding: 0px 0px 3% 0px;
+  height: 300px;
 }
 
 .rows__heading {
@@ -501,18 +501,17 @@ body.lock {
   display: -ms-flexbox;
   display: flex;
   font-size: 0;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 33.333%;
-  flex: 0 0 33.333%;
 }
 
 .should__img {
-  max-height: 700px;
   margin: 0px 40px 0px 0px;
 }
 
-.should__img img {
+.img img {
   max-width: 480px;
+  max-height: 700px;
+  -o-object-fit: cover;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -554,6 +553,61 @@ body.lock {
 
 .should__btn {
   margin: 10px 0px 20px;
+}
+
+.blog__ready {
+  background: #22356F;
+}
+
+.ready__body {
+  color: #ffffff;
+  margin: auto;
+  padding: 30px 20px 20px;
+}
+
+.ready__contact {
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0px 0px 60px;
+  display: inline-block;
+}
+
+.ready__contact:hover {
+  text-decoration: underline;
+}
+
+.ready__title {
+  font-size: 64px;
+  line-height: 94px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+.ready__text {
+  font-size: 36px;
+  line-height: 53px;
+  letter-spacing: -0.005em;
+  max-width: 600px;
+  margin: 10px 0px 40px;
+}
+
+.ready__btn {
+  font-size: 16px;
+  line-height: 23px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #62D0DF;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.ready__btn:hover {
+  background: #62D0DF;
+  color: #ffffff;
 }
 
 @media (max-width: 1100px) {
@@ -632,6 +686,16 @@ body.lock {
     font-size: 30px;
     line-height: 45px;
   }
+
+  .ready__title {
+    font-size: 54px;
+    line-height: 84px;
+  }
+
+  .ready__text {
+    font-size: 26px;
+    line-height: 43px;
+  }
 }
 
 @media (max-width: 910px) {
@@ -639,7 +703,7 @@ body.lock {
     line-height: 36px;
   }
 
-  .should__img {
+  .img {
     margin: 0px 20px 0px 0px;
   }
 }
@@ -664,7 +728,7 @@ body.lock {
     flex: 0 0 50%;
   }
 
-  .should__img {
+  .img {
     display: none;
   }
 
@@ -674,6 +738,14 @@ body.lock {
 
   .should__note {
     text-align: center;
+  }
+
+  .ready__contact {
+    margin: 40px 0px 20px;
+  }
+
+  .ready__btn {
+    margin: 0px 0px 40px;
   }
 }
 

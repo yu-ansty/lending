@@ -60,7 +60,7 @@
 
 .rows {
     &__columns {
-        padding: 0px 0px 3% 0px;
+        height: 300px;
     }
     &__heading {
         font-size: 32px;
@@ -76,31 +76,65 @@
             border-top: 2px solid #ffffff;
             margin: 20px 40px;
         }
+        &--b{
+            font-size: 28px;
+            letter-spacing: -0.03em;
+            color: #22356F;
+            font-weight: 500;
+            margin: 10px 30px 30px 50px;
+            text-align: start;
+            @media (max-width:1100px) {
+                margin: 10px 10px 20px 20px;
+            }
+        }
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: -0.03em;
+        color: rgba(34, 53, 111, 0.5);
+        max-width: 300px;
+        margin: 10px 30px 30px 50px;
+        @media (max-width:1100px) {
+            margin: 10px 10px 20px 20px;
+        }
     }
 }
 
 //-----------------------------
 
-.container-two {
+.container-wrap {
     flex-wrap: wrap;
 }
 
 .rows__line {
     flex: 0 0 33.333%;
-    padding: 0px 0px 13% 0px;
-    opacity: 0.9;
-    &:hover {
-        top: 1px;
-        opacity: 1;
-        box-shadow: 1px 2px 2px #000000;
+    &--b{
+        padding: 0px 0px 3% 0px;
+        @media (max-width:490px) {
+            margin: 0 auto;
+        }
+    }
+    &--hover {
+        padding: 0px 0px 13% 0px;
+        opacity: 0.9;
+        &:hover {
+            top: 1px;
+            opacity: 1;
+            box-shadow: 1px 2px 2px #000000;
+        }
+        @media (max-width:767px) {
+            padding: 0px 0px 18% 0px;
+        }
+        @media (max-width:490px) {
+            padding: 0px 0px 24% 0px;
+        }
     }
     @media (max-width:767px) {
         flex: 0 0 50%;
-        padding: 0px 0px 18% 0px;
     }
     @media (max-width:490px) {
         flex: 0 0 100%;
-        padding: 0px 0px 24% 0px;
     }
 }
 
@@ -132,13 +166,10 @@
 }
 /* *-------------------------------------*/
 
-// @import 'slick-theme';
-
 .slick-list {
     overflow: hidden;
 }
 
 .slick-track {
     @include flexbox();
-    flex: 0 0 33.333%;
 }

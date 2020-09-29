@@ -82,14 +82,12 @@
     }
 }
 
-.main__btn {
+.btn {
     font-size: 16px;
     text-transform: uppercase;
     line-height: 23px;
     letter-spacing: 0.1em;
     display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
     @media (max-width:440px) {
         align-items: center;
         flex-direction: column;
